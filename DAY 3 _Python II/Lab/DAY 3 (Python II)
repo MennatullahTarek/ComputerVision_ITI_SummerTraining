@@ -1,0 +1,747 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "dae2c62b",
+   "metadata": {},
+   "source": [
+    "- ## <u><span style=\"color:green;\"> Python Assignments: </span></u>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7ea588c9",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "46c6dd9d",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q1)</span> Write a program to display the last digit of a number."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "398c07a4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please Enter a number: 15\n",
+      "The last digit of 15 is 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Ask the user to enter number\n",
+    "number = int(input(\"Please Enter a number: \"))\n",
+    "\n",
+    "# Calculate the last digit using the modulo operator\n",
+    "last_digit = number % 10\n",
+    "\n",
+    "# print the last digit\n",
+    "print(f\"The last digit of {number} is {last_digit}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2b476b47",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "aab6fb5f",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q2)</span> Write a program to check whether the last digit of a number( entered by user ) is divisible by 3 or not ."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "25d2f297",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please Enter a number: 16\n",
+      "The last digit of 16 is divisible by 3\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Ask the user to enter number\n",
+    "number = int(input(\"Please Enter a number: \"))\n",
+    "\n",
+    "# Calculate the last digit using the modulo operator\n",
+    "last_digit = number % 10\n",
+    "\n",
+    "# Check if the last digit is divisible by 3\n",
+    "if last_digit % 3 == 0:\n",
+    "    print(f\"The last digit of {number} is divisible by 3\")\n",
+    "else:\n",
+    "    print(f\"The last digit of {number} is not divisible by 3\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d1a3153c",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e9adf3a2",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q3)</span> Write a program to accept a number from 1 to 7 and display the name of the day like 1 for Sunday , 2 for Monday and so on."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "a392a648",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please Enter a number from 1 to 7: 1\n",
+      "The name of the day is Sunday\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Ask the user to enter number from 1 to 7\n",
+    "number = int(input(\"Please Enter a number from 1 to 7: \"))\n",
+    "\n",
+    "# Define a list of day names\n",
+    "day_names = [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"]\n",
+    "\n",
+    "# Check if the input number is from 1 to 7\n",
+    "if number >= 1 and number <= 7:\n",
+    "    # Subtract 1 from the input number to get the index of the day name in the list 0 for sunday and so on.\n",
+    "    day_index = number -1\n",
+    "\n",
+    "    # Get the corresponding day name from the list using index\n",
+    "    day_name = day_names[day_index]\n",
+    "\n",
+    "    # print the day name\n",
+    "    print(f\"The name of the day is {day_name}\" )\n",
+    "else:\n",
+    "    print(\"Invalid input. Please enter a number from 1 to 7.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "425f4aec",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "819edb24",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q4)</span> Write a program to check a character is vowel or not."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "e3d85955",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please Enter a character: m\n",
+      "The character (m) is not a vowel.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Ask the user to enter a character\n",
+    "character = input(\"Please Enter a character: \")\n",
+    "\n",
+    "# Convert the character to lowercase for easier comparison\n",
+    "character = character.lower()\n",
+    "\n",
+    "# Define a list of vowels\n",
+    "vowels = ['a', 'e', 'i', 'o', 'u']\n",
+    "\n",
+    "# Check if the character is a vowel\n",
+    "if character in vowels:\n",
+    "    print(f\"The character ({character}) is a vowel.\")\n",
+    "else:\n",
+    "    print(f\"The character ({character}) is not a vowel.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cf458e80",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2f979484",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q5)</span> Accept the marked price from the user and calculate the Net amount as(Marked Price – Discount) to pay."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "82453b43",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please Enter the marked price: 10001\n",
+      "Net amount to pay is 8000.8\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Ask the user to enter the marked price\n",
+    "marked_price = float(input(\"Please Enter the marked price: \"))\n",
+    "\n",
+    "# Initialize the discount percentage\n",
+    "discount_percentage = 0\n",
+    "\n",
+    "# Check the range of the marked price and set the discount percentage accordingly\n",
+    "if marked_price > 10000:\n",
+    "    discount_percentage = 20\n",
+    "elif marked_price >= 7000:\n",
+    "    discount_percentage = 15\n",
+    "else:\n",
+    "    discount_percentage = 10\n",
+    "\n",
+    "# Calculate the discount amount\n",
+    "discount = marked_price * (discount_percentage / 100)\n",
+    "\n",
+    "# Calculate the net amount to pay\n",
+    "net_amount = marked_price - discount\n",
+    "\n",
+    "# Print the net amount to pay\n",
+    "print(f\"Net amount to pay is {net_amount}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "03d71a07",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "db2bdb9f",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q6)</span> Use a loop to display elements from a given list that are present at odd index positions\n",
+    "#### lst = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "0f0a12ed",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20\n",
+      "40\n",
+      "60\n",
+      "80\n",
+      "100\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Define the given list\n",
+    "lst = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]\n",
+    "\n",
+    "# Iterate over the list using a loop from 1 and step 2 to get only odd index position\n",
+    "for i in range(1,len(lst),2):\n",
+    "   # Print the element at the odd index position\n",
+    "    print(lst[i])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "1970713e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20\n",
+      "40\n",
+      "60\n",
+      "80\n",
+      "100\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Another way :\n",
+    "\n",
+    "# Define the given list\n",
+    "lst = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]\n",
+    "\n",
+    "# Iterate over the list using a loop from 1 and step 2 to get only odd index position\n",
+    "for i in range(len(lst)):\n",
+    "    # Check if the index position is odd\n",
+    "    if i % 2 != 0:\n",
+    "        # Print the element at the odd index position\n",
+    "        print(lst[i])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "abf05651",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cdb7a3d3",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q7)</span> Write program to print the following pattern using loop."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "aec4f3a4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "12\n",
+      "123\n",
+      "1234\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Define the number of rows in the pattern\n",
+    "num_rows = 4\n",
+    "\n",
+    "# Iterate over the rows using a loop\n",
+    "for i in range(1, num_rows + 1):  # Loop from 1 to num_rows \n",
+    "    # Iterate over the numbers in each row using a nested loop\n",
+    "    for j in range(1, i + 1):  # Loop from 1 to i (inclusive)\n",
+    "        # Print the current number followed by a space\n",
+    "        print(j,end='')\n",
+    "    # Move to the next line after printing each row\n",
+    "    print()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a757ebef",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "95e6d832",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q8)</span> Write a program that keep on accepting number from the user until user enters Zero. Display the sum and average of all the numbers."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "f3bb7e9d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Please Enter any Number ( enter zero to stop ): 1\n",
+      "Please Enter any Number ( enter zero to stop ): 2\n",
+      "Please Enter any Number ( enter zero to stop ): 3\n",
+      "Please Enter any Number ( enter zero to stop ): 0\n",
+      "Sum of numbers is : 6\n",
+      "Average of numbers is : 2.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Initialize variable for sum \n",
+    "sum_of_numbers = 0\n",
+    "number_of_numbers =0\n",
+    "\n",
+    "# Accept numbers from the user until zero is entered\n",
+    "while True:\n",
+    "   # Ask the user to enter numbers\n",
+    "   Number = int(input(\"Please Enter any Number ( enter zero to stop ): \"))\n",
+    "\n",
+    "    \n",
+    "  # Check if the number is zero\n",
+    "   if Number == 0:\n",
+    "        break\n",
+    "    \n",
+    "   \n",
+    "   sum_of_numbers += Number         # Increment the total by the number entered to calculte the sum\n",
+    "   number_of_numbers +=1                          # Increment the number of numbers by 1 \n",
+    "\n",
+    "# Calculate the average\n",
+    "average = sum_of_numbers / number_of_numbers\n",
+    "\n",
+    "# print the sum and average\n",
+    "print(f\"Sum of numbers is : {sum_of_numbers}\")\n",
+    "print(f\"Average of numbers is : {average}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0b598223",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8b305dcb",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q9)</span> Generate a Python list of all the even numbers between 4 to 30."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "b8db8e05",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The even numbers between 4 and 30  are : [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# empty list to store the even numbers\n",
+    "even_numbers = []\n",
+    "\n",
+    "# Iterate over the range of numbers from 4 to 30 \n",
+    "for number in range(4, 31):\n",
+    "    # Check if the number is even\n",
+    "    if number % 2 == 0:\n",
+    "        even_numbers.append(number)  # Add the even number to the list\n",
+    "\n",
+    "# print the list of even numbers\n",
+    "print(f\"The even numbers between 4 and 30  are : {even_numbers}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "02356161",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5e1a5031",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q10)</span>  Make Method to Return the Maximum and Minimum item from the given list. \n",
+    "#### lst=[100,30,22,40,60,20,10,300]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "8c9cdd71",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Maximum item in the given list is : 300\n",
+      "Minimum item in the given list is : 10\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Define find_max_min method to return the Maximum and Minimum item from a given list.\n",
+    "def find_max_min(lst):\n",
+    "   \n",
+    "    if not lst:  # if the list is empty\n",
+    "        return None\n",
+    "\n",
+    "    maximum = max(lst)\n",
+    "    minimum = min(lst)\n",
+    "\n",
+    "    return maximum, minimum\n",
+    "\n",
+    "\n",
+    "lst = [100, 30, 22, 40, 60, 20, 10, 300]\n",
+    "maximum_item, minimum_item = find_max_min(lst)\n",
+    "print(f\"Maximum item in the given list is : {maximum_item}\")\n",
+    "print(f\"Minimum item in the given list is : {minimum_item}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5dd12d48",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7af497ff",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "24051a4c",
+   "metadata": {},
+   "source": [
+    "- ##  <u><span style=\"color:green;\"> Hacker Rank </span> </u> "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "815ed83b",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q11)</span> Loops\n",
+    "#### Example:\n",
+    "#### n=3\n",
+    "#### The list of non-negative integers that are less than n=3 is [0,1,2] . Print the square of each number on a separate line."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "c8897940",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "0\n",
+      "1\n",
+      "4\n",
+      "9\n",
+      "16\n"
+     ]
+    }
+   ],
+   "source": [
+    "if __name__ == '__main__':\n",
+    "    #read an integer n from STDIN\n",
+    "    n = int(input())\n",
+    "    #loop from 0 to n-1\n",
+    "    for i in range(n):\n",
+    "        # print the square of each number on a separate line\n",
+    "        print(i ** 2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "26b79b19",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f22a4656",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q12)</span> Write a function\n",
+    "#### Given a year, determine whether it is a leap year. If it is a leap year, return the Boolean True, otherwise return False."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "cadf9b7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1997\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Define the is_leap function\n",
+    "def is_leap(year):\n",
+    "    \n",
+    "    # variable to define the leap year \n",
+    "    leap = False\n",
+    "    \n",
+    "    # if statement to check if it is a leap year\n",
+    "    if ((year % 400 == 0) and (year % 100 == 0)) | ((year % 4 ==0) and (year % 100 != 0)):\n",
+    "        \n",
+    "       # change leap to True\n",
+    "        leap = True\n",
+    "\n",
+    "    \n",
+    "    return leap\n",
+    "\n",
+    "year = int(input())\n",
+    "# Call the function\n",
+    "print (is_leap(year))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "efe4f310",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "074372fa",
+   "metadata": {},
+   "source": [
+    "### <span style=\"color:green;\"> Q13)</span> Python If-Else\n",
+    "#### Given an integer, , perform the following conditional actions:\n",
+    "- #### If n is odd, print Weird\n",
+    "- #### If n is even and in the inclusive range of 2 to 5 , print Not Weird\n",
+    "- #### If n is even and in the inclusive range of 6 to 20 , print Weird\n",
+    "- #### If n is even and greater than 20 , print Not Weird"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "00e40881",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n",
+      "Weird\n"
+     ]
+    }
+   ],
+   "source": [
+    "import math\n",
+    "import os\n",
+    "import random\n",
+    "import re\n",
+    "import sys\n",
+    "\n",
+    "\n",
+    "\n",
+    "if __name__ == '__main__':\n",
+    "    n = int(input().strip())\n",
+    "    \n",
+    "    #check if n is odd, print Weird\n",
+    "    if n%2 != 0:\n",
+    "        print(\"Weird\")\n",
+    "        \n",
+    "    #If n is even and in the inclusive range of 2 to 5 , print Not Weird   \n",
+    "    elif n%2 == 0 and n>2 and n<=5:\n",
+    "        print(\"Not Weird\")\n",
+    "        \n",
+    "    #If n is even and in the inclusive range of 6 to 20 , print Weird\n",
+    "    elif n%2 ==0 and n > 6 and n <=20:\n",
+    "        print(\"Weird\")\n",
+    "    \n",
+    "    else:\n",
+    "        print(\"Not Weird\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "81814cd9",
+   "metadata": {},
+   "source": [
+    " "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
