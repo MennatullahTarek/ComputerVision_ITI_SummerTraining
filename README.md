@@ -1,6 +1,7 @@
 # Computer Vision Training Resources 📸
 
 🎓 **About the Repository**  
+
 This repository contains my work and projects from the Computer Vision training at the Information Technology Institute (ITI).
 ---
 
