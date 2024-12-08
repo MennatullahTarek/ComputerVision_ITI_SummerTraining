@@ -1,6 +1,6 @@
-# Computer Vision Training Resources 📸
+# Computer Vision ITI Summer Training
 
-🎓 **About the Repository**  
+🎓 **About the repository**
 
 This repository contains my work and projects from the Computer Vision training at the Information Technology Institute (ITI).
 ---
@@ -20,7 +20,7 @@ This repository contains my work and projects from the Computer Vision training 
 
 ---
 
-🧩**Tools Used*8
+🧩 **Tools Used**
 - Python
 - OpenCV
 - Machine Learning
